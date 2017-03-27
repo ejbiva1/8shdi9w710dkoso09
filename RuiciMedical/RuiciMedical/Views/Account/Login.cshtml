@@ -13,6 +13,8 @@
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta content="" name="description" />
     <meta content="" name="author" />
+    <link href="~/Assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Assets/global/css/components.min.css" rel="stylesheet" id="style_components" type="text/css" />
     <link href="~/Assets/pages/css/login.min.css" rel="stylesheet" type="text/css" />
 </head>
 <body class="login">
@@ -27,7 +29,7 @@
         @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "login-form" }))
         {
             @Html.AntiForgeryToken()
-            <h3 class="form-title font-green">@Html.ActionLink("登录","Login") . @Html.ActionLink("注册","Register")</h3>
+            <h4 class="form-title font-green">@Html.ActionLink("登录","Login") . @Html.ActionLink("注册","Register")</h4>
 
             <div class="alert alert-danger display-hide" style="@displayValue">
                 <button class="close" data-close="alert"></button>
@@ -52,15 +54,19 @@
                 <input class="form-control form-control-solid placeholder-no-fix" type="password" autocomplete="off" placeholder="至少六个字符" name="password" />
             </div>
             <div>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <label class="rememberme check mt-checkbox mt-checkbox-outline">
                     @Html.CheckBoxFor(m => m.RememberMe)
                     @Html.LabelFor(m => m.RememberMe)
-                    <span></span>@Html.ActionLink("忘记密码？", "ForgetPwd")                  
+                    <span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    @Html.ActionLink("忘记密码？", "ForgetPwd")                  
                 </label>
                 
             </div>
             
             <div class="form-actions">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <button type="submit" class="btn green uppercase">登录</button>               
             </div>
         }

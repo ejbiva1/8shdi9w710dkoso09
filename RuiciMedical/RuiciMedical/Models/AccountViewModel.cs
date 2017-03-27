@@ -5,12 +5,12 @@ namespace RuiciMedical.Models
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "账    号：")]
+        [Display(Name = "账        号")]
         public string UserName { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
-        [Display(Name = "密    码：")]
+        [Display(Name = "密        码")]
         public string Password { get; set; }
 
         [Display(Name = "自动登录")]
