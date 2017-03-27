@@ -25,23 +25,23 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="tabbable-custom">
-                        <a href="#0" class="prev inactive btn default md-skip col-md-1" style="height:66px">
+                        <a href="#0" class="prev inactive btn default md-skip col-md-1" style="height:65px">
                             <i class="fa fa-chevron-left"></i>
                         </a>
                         <div class="col-md-10 btn default">
                             <ul class="nav nav-tabs col-md-12">
                                 @foreach (var dateitem in Model.DateTimeListsGroup)
-                                {
-                                    var selectitems = "";
-                                    if (dateitem.Value.Contains("周一"))
                                     {
-                                        selectitems = "active";
-                                    }
+                                        var selectitems = "";
+                                        if (dateitem.Value.Contains("周一"))
+                                        {
+                                            selectitems = "active";
+                                        }
 
                                     <li class="@selectitems col-md-2">
                                         <a href="#tab_1" id="@dateitem.Key" data-toggle="tab">@dateitem.Value</a>
                                     </li>
-                                }
+                                    }
                             </ul>
                         </div>
                         <a href="#0" class="next inactive btn default md-skip col-md-1" style="height:66px">
@@ -49,16 +49,16 @@
                         </a>
                         <div class="tab-content">
                             @foreach (var dateitem in Model.DateTimeListsGroup)
-                            {
-                                var selectitem = "";
-                                if (dateitem.Value.Contains("周一"))
                                 {
-                                    selectitem = "active";
-                                }
+                                    var selectitem = "";
+                                    if (dateitem.Value.Contains("周一"))
+                                    {
+                                        selectitem = "active";
+                                    }
                                 <div class="tab-pane @selectitem" id="@dateitem.Key">
                                     <div class="row">
                                         <div class="col-md-12">
-                                                @{ Html.RenderAction("DoctorSynopsisView", new { selectdatetime = "" }); }
+                                            @{ Html.RenderAction("DoctorSynopsisView", new { selectdatetime = "" }); }
                                         </div>
                                     </div>
                                 </div>
@@ -73,5 +73,288 @@
         <div class="col-md-2">
         </div>
     </div>
+</div>
 
+<div class="row">
+    <div class="col-md-12">
+        <div class="col-md-2">
+
+        </div>
+        <div class="tabbable-custom col-md-8">
+
+            <ul class="nav nav-tabs">
+                <li class="">
+                    <a href="#">合作品牌</a>
+                </li>
+                <li class="active">
+                    <a href="#tab_1" id="aTab_1" data-toggle="tab">合作机构</a>
+                </li>
+                <li>
+                    <a href="#tab_2" class="litab_2" data-toggle="tab">商业保险</a>
+                </li>
+                <li>
+                    <a href="#tab_3" class="litab_3" data-toggle="tab">商业保险</a>
+                </li>
+            </ul>
+            <div class="tab-content" style="height:300px">
+                <div class="tab-pane" id="tab_1">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/fudandaxuezhongshanhosptal.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/fudandaxuechildhospital.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/shanghaichanzhenghospital.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/shanghaijiaotongruijinhospital.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/guahaonet.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/shanghaihaiguan.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/expo.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/icbc.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/chinaconstructionbank.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/chinaofbank.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/chinalife.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/citibank.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/shanghaimetro.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/huadongzhengfa.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/bailiangroup.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/pizzahut.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/guangmingmilk.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/loreal.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/intel.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/huawei.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/ikea.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                </div>
+                                <div class="col-lg-2">
+                                </div>
+                                <div class="col-lg-2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane active" id="tab_2">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/fudandaxuezhongshanhosptal.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/fudandaxuechildhospital.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/shanghaichanzhenghospital.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/shanghaijiaotongruijinhospital.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/guahaonet.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/shanghaihaiguan.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/expo.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/icbc.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/chinaconstructionbank.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/chinaofbank.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/chinalife.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/citibank.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/shanghaimetro.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/huadongzhengfa.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/bailiangroup.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/pizzahut.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/guangmingmilk.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/loreal.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/intel.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/huawei.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/ikea.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                </div>
+                                <div class="col-lg-2">
+                                </div>
+                                <div class="col-lg-2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="tab_3">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/fudandaxuezhongshanhosptal.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/fudandaxuechildhospital.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/shanghaichanzhenghospital.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/shanghaijiaotongruijinhospital.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/guahaonet.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/shanghaihaiguan.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/expo.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/icbc.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/chinaconstructionbank.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/chinaofbank.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/chinalife.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/citibank.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/shanghaimetro.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/huadongzhengfa.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/bailiangroup.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/pizzahut.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/guangmingmilk.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/loreal.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/intel.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/huawei.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                    <img src="~/Styles/images/ikea.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
+                                </div>
+                                <div class="col-lg-2">
+                                </div>
+                                <div class="col-lg-2">
+                                </div>
+                                <div class="col-lg-2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div>
 </div>
