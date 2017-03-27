@@ -1,0 +1,89 @@
+﻿@model LoginViewModel
+
+@{
+    ViewBag.Title = "登录";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title> Ruici | 用户登录</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link href="~/Assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Assets/global/css/components.min.css" rel="stylesheet" id="style_components" type="text/css" />
+    <link href="~/Assets/global/css/plugins.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Assets/pages/css/login.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="login">
+    <div class="logo">
+        <a href="#">
+            <img src="~/Assets/apps/img/logo-invert.png" alt="" />
+        </a>
+    </div>
+    <div class="content">
+        @{
+            var hasError = !ViewData.ModelState.IsValid;
+            var errorMsgs = (ViewData.ModelState.Where(o => o.Value.Errors.Count > 0).SelectMany(o => o.Value.Errors, (o, error) => error.ErrorMessage)).ToList();
+        }
+        @{
+            var displayValue = hasError ? "display:block" : "";
+        }
+        @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "login-form" }))
+        {
+            @Html.AntiForgeryToken()
+            <h3 class="form-title font-green">登录</h3>
+
+            <div class="alert alert-danger display-hide" style="@displayValue">
+                <button class="close" data-close="alert"></button>
+                <span>
+                    @if (hasError)
+                    {
+                        foreach (var msg in errorMsgs)
+                        {
+                            @msg
+                            <br />
+                        }
+                    }
+                </span>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.UserName, new { @class = "control-label visible-ie8 visible-ie9" })                
+                <input class="form-control form-control-solid placeholder-no-fix" type="text" autocomplete="off" placeholder="用户名" name="username" />
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Password, new { @class = "control-label visible-ie8 visible-ie9" })                
+                <input class="form-control form-control-solid placeholder-no-fix" type="password" autocomplete="off" placeholder="密码" name="password" />
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="btn green uppercase">登陆</button>
+                <label class="rememberme check mt-checkbox mt-checkbox-outline">
+                    @Html.CheckBoxFor(m => m.RememberMe)
+                    @Html.LabelFor(m => m.RememberMe)
+                    <span></span>
+                </label>
+            </div>
+        }
+    </div>
+    <div class="copyright"> 2017 ©  大金牙金腰带金链子工作室</div>
+
+    <script src="~/Assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+    <script src="~/Assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="~/Assets/global/plugins/js.cookie.min.js" type="text/javascript"></script>
+    <script src="~/Assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+    <script src="~/Assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+    <script src="~/Assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+    <script src="~/Assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+    <script src="~/Assets/global/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
+    <script src="~/Assets/global/plugins/jquery-validation/js/additional-methods.min.js" type="text/javascript"></script>
+    <script src="~/Assets/global/plugins/select2/js/select2.full.min.js" type="text/javascript"></script>
+    <script src="~/Assets/global/scripts/app.min.js" type="text/javascript"></script>
+    <script src="~/Assets/pages/scripts/login.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+﻿@model UserViewModel
+@{
+    ViewBag.Title = "我的资料";
+    ViewBag.Description = "查看我的个人资料 ";
+}
+@section scripts{
+    <script src="~/Assets/global/plugins/jquery.form.js"></script>
+}
+
+<form id="form_upload" style="padding:20px; display:none;" action="@Html.Raw(Url.Action("Upload"))" method="post" enctype="multipart/form-data">
+    <input name="image" type="file" class="file" accept=".jpg,.png" />
+    <input type="button" value="上传" id="btnUpload" />
+    @Html.HiddenFor(m => m.ID)
+</form>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="row">
+            <h1 class="font-green sbold uppercase">@(Model.DisplayName ?? "(未知)")</h1>
+            <p>
+                @if (string.IsNullOrEmpty(Model.Email))
+                {
+                    <br />
+                }
+                else
+                {
+                    <a href=@("mailto://" + @Model.Email)> @Model.Email </a>
+                }
+            </p>
+        </div>
+        <div class="row">
+            <div class="row">
+                <label class="col-md-2 control-label">登录名</label>
+                <div class="col-md-6">
+                    @Html.TextBoxFor(m => m.LoginName, new { @class = "form-control", @readonly = true })
+                </div>
+            </div>
+            <div class="row">
+                <label class="col-md-2 control-label">英文名</label>
+                <div class="col-md-6">
+                    @Html.TextBoxFor(m => m.NameEn, new { @class = "form-control", @readonly = true })
+                </div>
+            </div>
+            <div class="row">
+                <label class="col-md-2 control-label">姓名</label>
+                <div class="col-md-6">
+                    @Html.TextBoxFor(m => m.Name, new { @class = "form-control", @readonly = true })
+                </div>
+            </div>
+            <div class="row">
+                <label class="col-md-2 control-label">电话号码</label>
+                <div class="col-md-6">
+                    @Html.TextBoxFor(m => m.Phone, new { @class = "form-control", @readonly = true })
+                </div>
+            </div>
+            <div class="row">
+                <label class="col-md-2 control-label">电子邮件</label>
+                <div class="col-md-6">
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @readonly = true })
+                </div>
+            </div>
+            <a href="javascript:;" class="btn btn-outline btn-circle btn-sm blue" onclick="modifyPassword();">
+                <i class="fa fa-edit"></i> 修改密码
+            </a>
+        </div>
+    </div>
+</div>
