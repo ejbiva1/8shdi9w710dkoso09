@@ -5,7 +5,7 @@ namespace RuiciMedical
     public class LoginViewModel
     {
         [Required(ErrorMessage = "用户名不能为空")]
-        [Display(Name = "用户名")]
+        [Display(Name = "账号")]
         public string UserName { get; set; }
 
         [Required(ErrorMessage = "密码不能为空")]
@@ -13,7 +13,7 @@ namespace RuiciMedical
         [Display(Name = "密码")]
         public string Password { get; set; }
 
-        [Display(Name = "记住我?")]
+        [Display(Name = "自动登录")]
         public bool RememberMe { get; set; }
     }
 }
