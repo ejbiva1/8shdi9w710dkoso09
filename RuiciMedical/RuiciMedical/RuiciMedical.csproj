@@ -5195,6 +5195,10 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
+    <Content Include="Styles\images\richfooterlogo.png" />
+    <Content Include="Styles\images\richlogo.png" />
+    <Content Include="Styles\images\TIANMAO.png" />
+    <Content Include="Styles\images\WEIXIN.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -5598,7 +5602,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Assets\global\plugins\angularjs\plugins\angular-file-upload\uploads\" />
     <Folder Include="Assets\layouts\layout\img\" />
-    <Folder Include="Styles\images\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

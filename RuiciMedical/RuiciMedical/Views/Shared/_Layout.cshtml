@@ -43,51 +43,131 @@
             <div class="top-menu">
                 @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
                 {
-                @Html.AntiForgeryToken()
-                <ul class="nav navbar-nav pull-right">
-                    <!-- BEGIN USER LOGIN DROPDOWN -->
-                    <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
-                    <li class="dropdown dropdown-user">
-                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                            <span class="username username-hide-on-mobile"> 您好, @(HttpContext.Current.User.Identity.Name) </span>
-                            <i class="fa fa-angle-down"></i>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-default">
-                            <li>
-                                <a href="@Url.Action("Index", "UserProfile")">
-                                    <i class="icon-user"></i> 个人资料
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:document.getElementById('logoutForm').submit()">
-                                    <i class="icon-key"></i> 退出登录
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- END USER LOGIN DROPDOWN -->
-                    <!-- BEGIN QUICK SIDEBAR TOGGLER -->
-                    <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
-                    <li class="dropdown dropdown-quick-sidebar-toggler">
-                        <a href="javascript:document.getElementById('logoutForm').submit()" class="dropdown-toggle">
-                            <i class="icon-logout"></i>
-                        </a>
-                    </li>
-                    <!-- END QUICK SIDEBAR TOGGLER -->
-                </ul>
-                                    }
+                    @Html.AntiForgeryToken()
+                    <ul class="nav navbar-nav pull-right">
+                        <!-- BEGIN USER LOGIN DROPDOWN -->
+                        <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                        <li class="dropdown dropdown-user">
+                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                <span class="username username-hide-on-mobile"> 您好, @(HttpContext.Current.User.Identity.Name) </span>
+                                <i class="fa fa-angle-down"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-default">
+                                <li>
+                                    <a href="@Url.Action("Index", "UserProfile")">
+                                        <i class="icon-user"></i> 个人资料
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:document.getElementById('logoutForm').submit()">
+                                        <i class="icon-key"></i> 退出登录
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- END USER LOGIN DROPDOWN -->
+                        <!-- BEGIN QUICK SIDEBAR TOGGLER -->
+                        <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                        <li class="dropdown dropdown-quick-sidebar-toggler">
+                            <a href="javascript:document.getElementById('logoutForm').submit()" class="dropdown-toggle">
+                                <i class="icon-logout"></i>
+                            </a>
+                        </li>
+                        <!-- END QUICK SIDEBAR TOGGLER -->
+                    </ul>
+                }
             </div>
         </div>
     </div>
     <div class="page-container">
         <div class="page-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img src="~/Styles/images/richlogo.png" class="col-md-12" title="" />
+                            </div>
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-9">
+                                        <input id="nights" type="text" class="form-control" value="">
+                                    </div>
+                                    <div class="col-sm-3" style="text-align: center; margin: 0px auto 10px auto;">
+                                        <input id="Search" type="button" class="btn col-md-12" style="background-color:#99ce7d" value="搜 索" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <label class="control-label col-sm-12" style="font-size: smaller;">湿疹 乌镇互联网医院 月经不调 鼻炎 甲亢 儿科 广东省中医院 反酸烧心</label>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label class="control-label col-md-12" style="color:#99ce7d">免费热线 400-110-8102</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <label class="control-label col-sm-12" style="font-size: smaller;">周一至周日 8：00-17：00</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+            </div>
             @RenderBody()
+        </div>
+    </div>
+    <div class="row" style="background-color: gainsboro;">
+        <div class="col-md-12">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="~/Styles/images/richfooterlogo.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;"/>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <label class="control-label col-sm-12" style="font-size: smaller;">地点： 上海市静安区江宁路212号3F</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-9">
+                                <label class="control-label col-sm-12" style="font-size: smaller;">总机电话 : 021-62585075</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-9">
+                                <label class="control-label col-sm-12" style="font-size: smaller;">全国服务热线 : 4001-108-102</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <span class="col-md-12"><a target="_blank" href="#">关于我们</a>|<a target="_blank" href="#">隐私政策</a>|<a target="_blank" href="#">版权说明</a></span>
+                        </div>
+                        <div class="row">
+                            <label class="control-label col-sm-12" style="font-size: smaller;">沪ICP备15049800号-1 瑞慈健康体检全国连锁机构版权所有 COPYRIGHT &copy;2015 TG.COM.CN ALL RIGHTS RESERVED</label>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-10">
+                            </div>
+                            <div class="col-sm-2">
+                                <img src="~/Styles/images/TIANMAO.png" class="col-sm-6" title="" />
+                                <img src="~/Styles/images/WEIXIN.png" class="col-sm-6" title="" />
+                            </div>                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
         </div>
     </div>
     <div class="page-footer">
         <div class="page-footer-inner">
-            2005-2016 &copy;
-            <a href="http://www.hubs1.net" title="" target="_blank">Ruici</a>
         </div>
         <div class="scroll-to-top">
             <i class="icon-arrow-up"></i>
