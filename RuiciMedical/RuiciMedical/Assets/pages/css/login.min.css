@@ -1,5 +1,5 @@
 .login {
-    background-color: #364150 !important;
+    background-color: #dde3ec !important;
 }
 
     .login .logo {
@@ -9,13 +9,8 @@
     }
 
     .login .content {
-        background-color: #c3ccda;
-        -webkit-border-radius: 7px;
-        -moz-border-radius: 7px;
-        -ms-border-radius: 7px;
-        -o-border-radius: 7px;
-        border-radius: 7px;
-        width: 600px;
+        background-color: #fff;
+        width: 500px;
         margin: 140px auto 10px;
         padding: 10px 30px 30px;
         overflow: hidden;
@@ -45,7 +40,8 @@
         }
 
         .login .content .form-control {
-            background-color: #dde3ec;
+            background-color: #fff;
+            width:450px;
             height: 43px;
             color: #8290a3;
             border: 1px solid #dde3ec;
@@ -113,12 +109,6 @@
         padding-top: 3px;
     }
 
-        .login-options .social-icons li a {
-            border-radius: 15px !important;
-            -moz-border-radius: 15px !important;
-            -webkit-border-radius: 15px !important;
-        }
-
 .login .content .form-actions .checkbox {
     margin-left: 0;
     padding-left: 0;
@@ -137,7 +127,9 @@
 }
 
 .login .content .form-actions .btn {
+    background-color:#4db3a5;
     margin-top: 1px;
+    width:350px;
     font-weight: 600;
     padding: 10px 20px !important;
 }
@@ -175,11 +167,6 @@
     padding: 15px 0 17px;
     text-align: center;
     background-color: #6c7a8d;
-    -webkit-border-radius: 0 0 7px 7px;
-    -moz-border-radius: 0 0 7px 7px;
-    -ms-border-radius: 0 0 7px 7px;
-    -o-border-radius: 0 0 7px 7px;
-    border-radius: 0 0 7px 7px;
 }
 
     .login .content .create-account > p {
