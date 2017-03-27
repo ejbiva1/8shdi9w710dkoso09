@@ -10,21 +10,10 @@ namespace RuiciMedical.Controllers
             return View();
         }
 
-        //
-        // GET: /Account/Login
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
         {
-            ViewBag.ReturnUrl = returnUrl;
-            return View();
-        }
-
-        //
-        // GET: /Account/Register
-        [AllowAnonymous]
-        public ActionResult Register()
-        {
-            return View();
+            return RedirectToLocal(returnUrl);
         }
 
         public class UserParam
@@ -50,7 +39,7 @@ namespace RuiciMedical.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult LogOff()
         {
-            //SignOut;
+            //SignOut();
             return Redirect("SignOut?returnUrl=");
         }
 

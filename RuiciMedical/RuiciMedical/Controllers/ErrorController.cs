@@ -17,7 +17,7 @@ namespace RuiciMedical.Controllers
                 var errorInfo = new ErrorInfoViewModel() { ErrorId = RouteData.Values["errorId"].ToString() };
                 return this.Json(errorInfo, JsonRequestBehavior.AllowGet);
             }
- 
+
             switch (httpCode)
             {
                 case 401:

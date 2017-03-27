@@ -4,35 +4,31 @@
     <div class="col-md-1">
     </div>
     <div class="col-md-10">
-        <div class="page-container">
-            <div class="page-content">
-                <div class="portlet-body">
-                    <div class="mt-element-card mt-card-round mt-element-overlay">
-                        @foreach (var groups in Model.RecentVisitExpertsGroup)
-                                    {
-                                <div class="row">
-                                    @foreach (var item in groups.RecentVisitExperts)
-                                            {
-                                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                            <div class="mt-card-item">
-                                                <div class="mt-card-avatar mt-overlay-1 mt-scroll-left">
-                                                    <img src="@item.Image" />
-                                                </div>
-                                                <div class="mt-card-content">
-                                                    <h3 class="mt-card-name">@item.DoctorName</h3>
-                                                    <p class="mt-card-desc font-grey-mint">@item.Title</p>
-                                                    <p class="mt-card-desc font-grey-mint">@item.Hospital</p>
-                                                    <div class="mt-card-social">
-                                                        <button class="btn green-meadow" type="button">立即预约</button>
-                                                    </div>
-                                                </div>
-                                            </div>
+        <div class="portlet-body">
+            <div class="mt-element-card mt-card-round mt-element-overlay">
+                @foreach (var groups in Model.RecentVisitExpertsGroup)
+                {
+                    <div class="row">
+                        @foreach (var item in groups.RecentVisitExperts)
+                        {
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                <div class="mt-card-item">
+                                    <div class="mt-card-avatar mt-overlay-1 mt-scroll-left">
+                                        <img src="@item.Image" />
+                                    </div>
+                                    <div class="mt-card-content">
+                                        <h3 class="mt-card-name">@item.DoctorName</h3>
+                                        <p class="mt-card-desc font-grey-mint">@item.Title</p>
+                                        <p class="mt-card-desc font-grey-mint">@item.Hospital</p>
+                                        <div class="mt-card-social">
+                                            <button class="btn green-meadow" type="button">立即预约</button>
                                         </div>
-                                            }
+                                    </div>
                                 </div>
-                                    }
+                            </div>
+                        }
                     </div>
-                </div>
+                }
             </div>
         </div>
     </div>

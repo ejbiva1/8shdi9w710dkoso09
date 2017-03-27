@@ -1,74 +1,104 @@
 ﻿@model HomeInfoViewModel
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "瑞慈首页";
+}
+@section scripts{
+    <script src="../assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/js.cookie.min.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/horizontal-timeline/horozontal-timeline.min.js" type="text/javascript"></script>
+    <script src="../assets/global/scripts/app.min.js" type="text/javascript"></script>
+    <script src="../assets/layouts/layout/scripts/layout.min.js" type="text/javascript"></script>
+    <script src="../assets/layouts/layout/scripts/demo.min.js" type="text/javascript"></script>
+    <script src="../assets/layouts/global/scripts/quick-sidebar.min.js" type="text/javascript"></script>
 }
 
-<head>
-    <meta charset="utf-8" />
-    <title>瑞慈首页</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta content="" name="description" />
-    <meta content="" name="author" />
-    <!-- BEGIN GLOBAL MANDATORY STYLES -->
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
-    <link href="../assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <link href="../assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
-    <link href="../assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="../assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
-    <!-- END GLOBAL MANDATORY STYLES -->
-    <!-- BEGIN THEME GLOBAL STYLES -->
-    <link href="../assets/global/css/components.min.css" rel="stylesheet" id="style_components" type="text/css" />
-    <link href="../assets/global/css/plugins.min.css" rel="stylesheet" type="text/css" />
-    <!-- END THEME GLOBAL STYLES -->
-    <!-- BEGIN THEME LAYOUT STYLES -->
-    <link href="../assets/layouts/layout/css/layout.min.css" rel="stylesheet" type="text/css" />
-    <link href="../assets/layouts/layout/css/themes/darkblue.min.css" rel="stylesheet" type="text/css" id="style_color" />
-    <link href="../assets/layouts/layout/css/custom.min.css" rel="stylesheet" type="text/css" />
-    <!-- END THEME LAYOUT STYLES -->
-    <link rel="shortcut icon" href="favicon.ico" />
-</head>
-
-<body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="page-container">
-                <div class="page-content-wrapper">
-                    <div class="page-content">
-                        <div class="col-md-12">
-                            <div class="portlet light portlet-fit bordered">
-                                <div class="portlet-body">
-                                    <div class="mt-element-card mt-card-round mt-element-overlay">
-                                        @foreach (var groups in Model.RecentVisitExpertsGroup)
-                                        {
-                                            <div class="row">
-                                                @foreach (var item in groups.RecentVisitExperts)
-                                                {
-                                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                                        <div class="mt-card-item">
-                                                            <div class="mt-card-avatar mt-overlay-1 mt-scroll-left">
-                                                                <img src="@item.Image" />
-                                                            </div>
-                                                            <div class="mt-card-content">
-                                                                <h3 class="mt-card-name">@item.DoctorName</h3>
-                                                                <p class="mt-card-desc font-grey-mint">@item.Title</p>
-                                                                <p class="mt-card-desc font-grey-mint">@item.Hospital</p>
-                                                                <div class="mt-card-social">
-                                                                    <button class="btn green-meadow" type="button">立即预约</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                }
-                                            </div>
-                                        }
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="col-md-3">
+                <img src="~/Styles/images/logpic.png" title="" />
+            </div>
+            <div class="col-md-7">
+                <div class="row">
+                    <div class="col-md-9">
+                        <input id="nights" type="text" class="form-control" value="">
+                    </div>
+                    <div class="col-sm-3" style="text-align: center; margin: 0px auto 10px auto;">
+                        <input id="Search" type="button" class="btn red" style="width: 140px" value="搜 索" />
                     </div>
                 </div>
             </div>
+            <div class="col-md-2">
+                <img src="~/Styles/images/logpic.png" title="" />
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="tabbable-custom">
+                        <a href="#0" class="prev inactive btn default md-skip col-md-1" style="height:66px">
+                            <i class="fa fa-chevron-left"></i>
+                        </a>
+                        <div class="col-md-10 btn default">
+                            <ul class="nav nav-tabs col-md-12">
+                                @foreach (var dateitem in Model.DateTimeListsGroup)
+                                {
+                                    var selectitems = "";
+                                    if (dateitem.Value.Contains("周一"))
+                                    {
+                                        selectitems = "active";
+                                    }
+
+                                    <li class="@selectitems col-md-2">
+                                        <a href="#tab_1" id="@dateitem.Key" data-toggle="tab">@dateitem.Value</a>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                        <a href="#0" class="next inactive btn default md-skip col-md-1" style="height:66px">
+                            <i class="fa fa-chevron-right"></i>
+                        </a>
+                        <div class="tab-content">
+                            @foreach (var dateitem in Model.DateTimeListsGroup)
+                            {
+                                var selectitem = "";
+                                if (dateitem.Value.Contains("周一"))
+                                {
+                                    selectitem = "active";
+                                }
+                                <div class="tab-pane @selectitem" id="@dateitem.Key">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                                @{ Html.RenderAction("DoctorSynopsisView", new { selectdatetime = "" }); }
+                                        </div>
+                                    </div>
+                                </div>
+                                                    }
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-2">
         </div>
     </div>
-</body>
+
+</div>
