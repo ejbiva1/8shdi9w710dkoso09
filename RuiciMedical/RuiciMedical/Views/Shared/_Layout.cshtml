@@ -38,47 +38,43 @@
 </head>
 
 <body class="page-header-fixed page-sidebar-closed-hide-logo frame">
-    <div class="page-header navbar navbar-fixed-top">
-        <div class="page-header-inner ">
-            <div class="top-menu">
-                @Html.Partial("_LoginPartial")
-                @*@using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
-                    {
-                        @Html.AntiForgeryToken()
-                        <ul class="nav navbar-nav pull-right">
-                            <!-- BEGIN USER LOGIN DROPDOWN -->
-                            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
-                            <li class="dropdown dropdown-user">
-                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                    <span class="username username-hide-on-mobile"> 您好, @(HttpContext.Current.User.Identity.Name) </span>
-                                    <i class="fa fa-angle-down"></i>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-default">
-                                    <li>
-                                        <a href="@Url.Action("Index", "UserProfile")">
-                                            <i class="icon-user"></i> 个人资料
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:document.getElementById('logoutForm').submit()">
-                                            <i class="icon-key"></i> 退出登录
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <!-- END USER LOGIN DROPDOWN -->
-                            <!-- BEGIN QUICK SIDEBAR TOGGLER -->
-                            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
-                            <li class="dropdown dropdown-quick-sidebar-toggler">
-                                <a href="javascript:document.getElementById('logoutForm').submit()" class="dropdown-toggle">
-                                    <i class="icon-logout"></i>
+    <div class="navbar-inverse navbar-fixed-top" style="height:30px; padding-top:5px">
+        @Html.Partial("_LoginPartial")
+        @*@using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+            {
+                @Html.AntiForgeryToken()
+                <ul class="nav navbar-nav pull-right">
+                    <!-- BEGIN USER LOGIN DROPDOWN -->
+                    <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                    <li class="dropdown dropdown-user">
+                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                            <span class="username username-hide-on-mobile"> 您好, @(HttpContext.Current.User.Identity.Name) </span>
+                            <i class="fa fa-angle-down"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-default">
+                            <li>
+                                <a href="@Url.Action("Index", "UserProfile")">
+                                    <i class="icon-user"></i> 个人资料
                                 </a>
                             </li>
-                            <!-- END QUICK SIDEBAR TOGGLER -->
+                            <li>
+                                <a href="javascript:document.getElementById('logoutForm').submit()">
+                                    <i class="icon-key"></i> 退出登录
+                                </a>
+                            </li>
                         </ul>
-                    }*@
-            </div>
-        </div>
+                    </li>
+                    <!-- END USER LOGIN DROPDOWN -->
+                    <!-- BEGIN QUICK SIDEBAR TOGGLER -->
+                    <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                    <li class="dropdown dropdown-quick-sidebar-toggler">
+                        <a href="javascript:document.getElementById('logoutForm').submit()" class="dropdown-toggle">
+                            <i class="icon-logout"></i>
+                        </a>
+                    </li>
+                    <!-- END QUICK SIDEBAR TOGGLER -->
+                </ul>
+            }*@
     </div>
     <div class="page-container">
         <div class="page-content">
@@ -121,59 +117,23 @@
             @RenderBody()
         </div>
     </div>
-    <div class="row" style="background-color: gainsboro;">
-        <div class="col-md-12">
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
-                <div class="row">
-                    <div class="col-md-3">
-                        <img src="~/Styles/images/richfooterlogo.png" class="col-md-12" title="" style="vertical-align: middle;text-align: center;" />
-                    </div>
-                    <div class="col-md-3">
-                        <div class="row">
-                            <div class="col-md-9">
-                                <label class="control-label col-sm-12" style="font-size: smaller;">地点： 上海市静安区江宁路212号3F</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-9">
-                                <label class="control-label col-sm-12" style="font-size: smaller;">总机电话 : 021-62585075</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-9">
-                                <label class="control-label col-sm-12" style="font-size: smaller;">全国服务热线 : 4001-108-102</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="row">
-                            <span class="col-md-12"><a target="_blank" href="#">关于我们</a>|<a target="_blank" href="#">隐私政策</a>|<a target="_blank" href="#">版权说明</a></span>
-                        </div>
-                        <div class="row">
-                            <label class="control-label col-sm-12" style="font-size: smaller;">沪ICP备15049800号-1 瑞慈健康体检全国连锁机构版权所有 COPYRIGHT &copy;2015 TG.COM.CN ALL RIGHTS RESERVED</label>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-10">
-                            </div>
-                            <div class="col-sm-2">
-                                <img src="~/Styles/images/TIANMAO.png" class="col-sm-6" title="" />
-                                <img src="~/Styles/images/WEIXIN.png" class="col-sm-6" title="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div class="row" style="background-color: #f5f5f5;padding:0;margin:0;">
+        <div style="padding-left:210px;padding-bottom:100px">
+            <div style="float:left">
+                <img src="~/Styles/images/richfooterlogo.png" title="" style="padding-top:25px;width:167px;height:68px;" />
             </div>
-            <div class="col-md-2"></div>
+            <div style="padding:25px 0px 0px 0px;font-size:10px;-webkit-transform:scale(0.8);text-align:left;float:left">
+                地点：上海市静安区江宁路212号3F</br> 
+                全国服务热线：4001-108-102</br> 
+                总机电话：021-62585075       
+            </div>
+            <div style="padding:25px 0px 0px 0px;margin-right:135px;font-size:10px;-webkit-transform:scale(0.8);text-align:right;float:left">
+                <a target="_blank" href="#" style="color:#797979;margin-right:5px">关于我们</a>|<a target="_blank" href="#" style="color:#797979;margin-right:5px;margin-left:5px">隐私政策</a>|<a target="_blank" href="#" style="color:#797979;;margin-left:5px">版权说明</a></br>
+                沪ICP备15049800号-1 瑞慈健康体检全国连锁机构版权所有 COPYRIGHT &copy;2015 TG.COM.CN ALL RIGHTS RESERVED
+            </div>
         </div>
     </div>
-    <div class="page-footer">
-        <div class="page-footer-inner">
-        </div>
-        <div class="scroll-to-top">
-            <i class="icon-arrow-up"></i>
-        </div>
-    </div>
+
 
     @RenderSection("scripts", required: false)
 </body>

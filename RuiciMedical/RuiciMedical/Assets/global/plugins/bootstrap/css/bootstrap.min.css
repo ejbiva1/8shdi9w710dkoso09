@@ -25,7 +25,7 @@ body, figure {
 }
 
 .navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse, .pre-scrollable {
-    max-height: 340px;
+    max-height: 350px;
 }
 
 html {
@@ -1604,7 +1604,7 @@ pre code, table {
 .page-header {
     padding-bottom: 9px;
     margin: 40px 0 20px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #777;
 }
 
 dl, ol, ul {
@@ -4558,7 +4558,7 @@ tbody.collapse.in {
 
     .navbar-right {
         float: right !important;
-        margin-right: -15px;
+        margin-right: 215px;
     }
 
         .navbar-right ~ .navbar-right {
@@ -4662,8 +4662,7 @@ tbody.collapse.in {
     }
 
 .navbar-inverse {
-    background-color: #222;
-    border-color: #090909;
+    background-color: #f9f9f9;
 }
 
     .navbar-inverse .navbar-brand {

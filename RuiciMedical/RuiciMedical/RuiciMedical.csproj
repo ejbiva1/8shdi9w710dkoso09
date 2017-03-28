@@ -5229,6 +5229,9 @@
     <Content Include="Styles\images\shanghaijiaotongruijinhospital.png" />
     <Content Include="Styles\images\shanghaimetro.png" />
     <Content Include="Styles\images\TIANMAO.png" />
+    <Content Include="Styles\images\topbar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Styles\images\WEIXIN.png" />
     <Content Include="Web.config" />
   </ItemGroup>
