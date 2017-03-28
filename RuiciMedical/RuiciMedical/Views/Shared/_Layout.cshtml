@@ -40,92 +40,58 @@
 <body class="page-header-fixed page-sidebar-closed-hide-logo frame">
     <div class="navbar-inverse navbar-fixed-top" style="height:30px; padding-top:5px">
         @Html.Partial("_LoginPartial")
-        @*@using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
-            {
-                @Html.AntiForgeryToken()
-                <ul class="nav navbar-nav pull-right">
-                    <!-- BEGIN USER LOGIN DROPDOWN -->
-                    <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
-                    <li class="dropdown dropdown-user">
-                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                            <span class="username username-hide-on-mobile"> 您好, @(HttpContext.Current.User.Identity.Name) </span>
-                            <i class="fa fa-angle-down"></i>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-default">
-                            <li>
-                                <a href="@Url.Action("Index", "UserProfile")">
-                                    <i class="icon-user"></i> 个人资料
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:document.getElementById('logoutForm').submit()">
-                                    <i class="icon-key"></i> 退出登录
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- END USER LOGIN DROPDOWN -->
-                    <!-- BEGIN QUICK SIDEBAR TOGGLER -->
-                    <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
-                    <li class="dropdown dropdown-quick-sidebar-toggler">
-                        <a href="javascript:document.getElementById('logoutForm').submit()" class="dropdown-toggle">
-                            <i class="icon-logout"></i>
-                        </a>
-                    </li>
-                    <!-- END QUICK SIDEBAR TOGGLER -->
-                </ul>
-            }*@
     </div>
-    <div class="page-container">
-        <div class="page-content">
-            <div class="row">
+    <div class="page-container" >
+        <div class="page-content" >
+            <div class="row" style="margin-top:20px;margin-bottom:20px">
                 <div class="col-md-12">
                     <div class="col-md-2"></div>
                     <div class="col-md-8">
                         <div class="row">
                             <div class="col-md-3">
-                                <img src="~/Styles/images/richlogo.png" class="col-md-12" title="" />
+                                <img src="~/Styles/images/richlogo.png" class="col-md-12" title="" style="width:330px;height:63px;" />
                             </div>
                             <div class="col-md-6">
                                 <div class="row">
-                                    <div class="col-md-9">
-                                        <input id="nights" type="text" class="form-control" value="">
-                                    </div>
-                                    <div class="col-sm-3" style="text-align: center; margin: 0px auto 10px auto;">
-                                        <input id="Search" type="button" class="btn col-md-12" style="background-color:#99ce7d" value="搜 索" />
+                                    <div class="col-md-9" style="width:380px;margin-left:120px">
+                                        <input id="nights" type="text" class="form-control" value="" style="width:300px;float:left;margin:0px">
+                                        <input id="Search" type="button" class="btn col-md-12" style="background-color:#99ce7d;width:70px;float:left" value="搜 索" />
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <label class="control-label col-sm-12" style="font-size: smaller;">湿疹 乌镇互联网医院 月经不调 鼻炎 甲亢 儿科 广东省中医院 反酸烧心</label>
+                                    <label class="control-label col-sm-12" style="font-size:10px;-webkit-transform:scale(0.8);margin-left:35px" >湿疹 乌镇互联网医院 月经不调 鼻炎 甲亢 儿科 广东省中医院 反酸烧心</label>
                                 </div>
                             </div>
                             <div class="col-md-3">
-                                <div class="row">
+                                <div class="row" style="float:right">
                                     <div class="col-md-12">
                                         <label class="control-label col-md-12" style="color:#99ce7d">免费热线 400-110-8102</label>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <label class="control-label col-sm-12" style="font-size: smaller;">周一至周日 8：00-17：00</label>
+                                <div class="row" style="float:right">
+                                    <label class="control-label col-sm-12" style="font-size:10px;-webkit-transform:scale(0.8)">周一至周日 8：00-17：00</label>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-2"></div>
+                    <div class="col-md-2">
+                        </di
+                    </div>
                 </div>
             </div>
-            @RenderBody()
         </div>
+        @RenderBody()
     </div>
+    
     <div class="row" style="background-color: #f5f5f5;padding:0;margin:0;">
         <div style="padding-left:210px;padding-bottom:100px">
             <div style="float:left">
-                <img src="~/Styles/images/richfooterlogo.png" title="" style="padding-top:25px;width:167px;height:68px;" />
+                <img src="~/Styles/images/richfooterlogo.png" title="" style="padding-top:25px;width:157px;height:68px;" />
             </div>
             <div style="padding:25px 0px 0px 0px;font-size:10px;-webkit-transform:scale(0.8);text-align:left;float:left">
-                地点：上海市静安区江宁路212号3F</br> 
-                全国服务热线：4001-108-102</br> 
-                总机电话：021-62585075       
+                地点：上海市静安区江宁路212号3F</br>
+                全国服务热线：4001-108-102</br>
+                总机电话：021-62585075
             </div>
             <div style="padding:25px 0px 0px 0px;margin-right:135px;font-size:10px;-webkit-transform:scale(0.8);text-align:right;float:left">
                 <a target="_blank" href="#" style="color:#797979;margin-right:5px">关于我们</a>|<a target="_blank" href="#" style="color:#797979;margin-right:5px;margin-left:5px">隐私政策</a>|<a target="_blank" href="#" style="color:#797979;;margin-left:5px">版权说明</a></br>
