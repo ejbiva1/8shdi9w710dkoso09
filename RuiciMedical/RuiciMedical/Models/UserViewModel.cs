@@ -58,7 +58,7 @@ namespace RuiciMedical.Models
 
         public string Remark { get; set; }
 
-        public string DisplayName => !string.IsNullOrEmpty(Name) ? Name : !string.IsNullOrEmpty(NameEn) ? NameEn : LoginName;
+        //public string DisplayName => !string.IsNullOrEmpty(Name) ? Name : !string.IsNullOrEmpty(NameEn) ? NameEn : LoginName;
 
         public string Photo { get; set; }
 

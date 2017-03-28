@@ -10,10 +10,20 @@ namespace RuiciMedical.Controllers
             return View();
         }
 
+        //
+        // GET: /Account/Login
         [AllowAnonymous]
-        public ActionResult Login(string returnUrl)
+        public ActionResult Login()
         {
-            return RedirectToLocal(returnUrl);
+            return View();
+        }
+
+        //
+        // GET: /Account/Register
+        [AllowAnonymous]
+        public ActionResult Register()
+        {
+            return View();
         }
 
         public class UserParam

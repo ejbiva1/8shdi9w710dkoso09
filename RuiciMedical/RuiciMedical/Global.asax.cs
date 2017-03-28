@@ -1,5 +1,4 @@
 ﻿using RuiciMedical.Controllers;
-using RuiciMedical.Utilities;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
@@ -25,7 +24,7 @@ namespace RuiciMedical
             var exception = Server.GetLastError();
 
             var httpException = new HttpException(null, exception);
-            if (httpException.GetHttpCode() == 404 && WebHelper.IsStaticResource(this.Request))
+            if (httpException.GetHttpCode() == 404)
             {
                 return;
             }
@@ -42,10 +41,6 @@ namespace RuiciMedical
             //TODO: 跳转到错误页面
             IController errorController = DependencyResolver.Current.GetService<ErrorController>();
             errorController.Execute(new RequestContext(new HttpContextWrapper(Context), errorrouteData));
-
-
-
-
         }
     }
 }

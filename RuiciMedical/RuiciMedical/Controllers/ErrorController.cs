@@ -10,7 +10,6 @@ namespace RuiciMedical.Controllers
         {
             Response.TrySkipIisCustomErrors = true;
             var httpException = RouteData.Values["httpException"] as HttpException;
-            httpCode = httpCode ?? (httpException?.GetHttpCode() ?? 500);
             if (Request.IsAjaxRequest())
             {
                 Response.StatusCode = httpCode ?? 500;

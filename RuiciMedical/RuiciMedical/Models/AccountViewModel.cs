@@ -20,18 +20,33 @@ namespace RuiciMedical.Models
     public class RegisterViewModel
     {
         [Required]
-        [Display(Name = "User name")]
+        [Display(Name = "手  机  号")]
+        public string CellPhoneNumber { get; set; }
+
+        [Required]
+        [Display(Name = "验  证  码")]
+        public string ValidationCode { get; set; }
+
+        [Required]
+        [Display(Name = "姓      名")]
         public string UserName { get; set; }
+
+        [Required]
+        [Display(Name = "性      别")]
+        public string gender { get; set; }
+
+        [Required]
+        [Display(Name = "身份证号")]
+        public string IDNumber { get; set; }
 
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Display(Name = "设置密码")]
         public string Password { get; set; }
 
-        [DataType(DataType.Password)]
-        [Display(Name = "Confirm password")]
-        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
-        public string ConfirmPassword { get; set; }
+        [Required]
+        [Display(Name = "我同意")]
+        public bool ConfirmAgreement { get; set; }
     }
 }
