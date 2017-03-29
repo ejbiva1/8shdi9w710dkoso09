@@ -14791,6 +14791,8 @@ body[ng-controller] .modal {
     border: 0;
 }
 
+
+
 .portlet:not(.light) .tabbable-line {
     padding-top: 15px;
 }
@@ -14802,7 +14804,8 @@ body[ng-controller] .modal {
 
     .tabbable-line > .nav-tabs > li {
         margin: 0;
-        border-bottom: 4px solid transparent;
+        padding:5px 0px 5px 0px;
+        border-bottom: 4px solid #fff;
     }
 
         .tabbable-line > .nav-tabs > li > a {
@@ -14815,33 +14818,43 @@ body[ng-controller] .modal {
         }
 
             .tabbable-line > .nav-tabs > li > a > i {
-                color: #a6a6a6;
+                color: #333;
             }
 
         .tabbable-line > .nav-tabs > li.active {
+            padding:5px 0px 5px 0px;
             background: 0 0;
-            border-bottom: 4px solid #36c6d3;
+            background-color:#89ae4e;
             position: relative;
+            text-decoration:none;
         }
 
             .tabbable-line > .nav-tabs > li.active > a {
                 border: 0;
-                color: #333;
+                color: #fff;
+                text-decoration:none;
             }
 
                 .tabbable-line > .nav-tabs > li.active > a > i {
                     color: #404040;
+                    text-decoration:none;
                 }
 
         .tabbable-line > .nav-tabs > li.open, .tabbable-line > .nav-tabs > li:hover {
+            padding:5px 0px 5px 0px;
             background: 0 0;
-            border-bottom: 4px solid #9fe4ea;
+            text-decoration:none;
+            background-color:#a8d461;
+            color:#fff;
+            /*border-bottom: 4px solid #9fe4ea;*/
         }
 
             .tabbable-line > .nav-tabs > li.open > a, .tabbable-line > .nav-tabs > li:hover > a {
                 border: 0;
                 background: 0 0 !important;
-                color: #333;
+                background-color:#89ae4e;
+                color: #fff;
+                text-decoration:none;
             }
 
                 .tabbable-line > .nav-tabs > li.open > a > i, .tabbable-line > .nav-tabs > li:hover > a > i {
@@ -14870,12 +14883,14 @@ body[ng-controller] .modal {
     .tabbable-line.tabs-below > .nav-tabs > li:hover {
         border-bottom: 0;
         border-top: 4px solid #fbdcde;
+        text-decoration:none;
     }
 
     .tabbable-line.tabs-below > .nav-tabs > li.active {
         margin-bottom: -2px;
         border-bottom: 0;
         border-top: 4px solid #ed6b75;
+        text-decoration:none;
     }
 
 .tabbable-line.tabs-below > .tab-content {
@@ -25177,3 +25192,5 @@ body[ng-controller] .modal {
         background: rgba(238,238,238,.9);
         color: #333;
     }
+
+
