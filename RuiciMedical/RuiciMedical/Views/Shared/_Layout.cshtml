@@ -47,42 +47,44 @@
         <div style="margin: 0 auto; width:1024px">@Html.Partial("_LoginPartial")</div>
     </div>
     <div class="page-container">
-        <div class="page-content" style="Width: 100%; text-align: center">
-            <div class="row" style="margin: 0 auto; width: 1024px;">
-                <div class="row" style="padding-top: 15px; padding-bottom: 25px">
-                    <div class="col-md-3" style="width:384px">
-                        <img src="~/Styles/images/richlogo.png" class="col-md-12" title="" style="width:330px;height:63px;" />
-                    </div>
-                    <div style="width: 400px; float: left">
-                        <div class="row" style="width: 400px">
-                            <div class="col-md-9" style="width:400px">
-                                <input id="nights" type="text" class="form-control" value="" style="width:300px;float:left;margin:0px">
-                                <input id="Search" type="button" class="btn col-md-12" style="background-color: #89ae4e; width: 70px; float: left" value="搜 索" />
+        <div class="page-content">
+            <div style="Width: 100%; text-align: center; border-bottom: 2px solid #89ae4e; height:150px">
+                <div class="row" style="margin: 0 auto; width: 1024px;">
+                    <div class="row" style="padding-top: 15px; padding-bottom: 25px">
+                        <div class="col-md-3" style="width:384px">
+                            <img src="~/Styles/images/richlogo.png" class="col-md-12" title="" style="width:330px;height:63px;" />
+                        </div>
+                        <div style="width: 400px; float: left">
+                            <div class="row" style="width: 400px">
+                                <div class="col-md-9" style="width:400px">
+                                    <input id="nights" type="text" class="form-control" value="" style="width:300px;float:left;margin:0px">
+                                    <input id="Search" type="button" class="btn col-md-12" style="background-color: #89ae4e; width: 70px; float: left" value="搜 索" />
+                                </div>
+                            </div>
+                            <div style="width: 400px;  color: #797979; font-size: 10px; -webkit-transform: scale(0.9);text-align:left; margin:5px 0 0 0; padding:0 0 0 0;">
+                                湿疹 乌镇互联网医院 月经不调 鼻炎 甲亢 儿科 广东省中医院 反酸烧心
                             </div>
                         </div>
-                        <div style="width: 400px;  color: #797979; font-size: 10px; -webkit-transform: scale(0.9);text-align:left; margin:0 0 0 0; padding:0 0 0 0;">
-                            湿疹 乌镇互联网医院 月经不调 鼻炎 甲亢 儿科 广东省中医院 反酸烧心
-                        </div>
-                    </div>
-                    <div style="width:250px; text-align:right; float:left">
-                        <div class="row" style="margin: 0 auto; width: 240px; text-align: right; color: #89ae4e; font-size: 15px">
-                            免费热线 400-110-8102
-                        </div>
-                        <div class="row" style="margin: 0 auto; width: 240px; text-align: right; font-size: 10px; -webkit-transform: scale(1); ">
-                            周一至周日 8：00-17：00
+                        <div style="width:250px; text-align:right; float:left">
+                            <div class="row" style="margin: 0 auto; width: 240px; text-align: right; color: #89ae4e; font-size: 15px">
+                                免费热线 400-110-8102
+                            </div>
+                            <div class="row" style="margin: 0 auto; width: 240px; text-align: right; font-size: 10px; -webkit-transform: scale(1); ">
+                                周一至周日 8：00-17：00
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="tabbable-line" style="margin: 0 auto; width: 1024px;">
-                <ul class="nav-tabs" style="list-style: none;margin:0px 0px 5px 0px;padding:0px 0px 0px 0px; font-size:15px">
-                    <li class="active"><a href="#tab_1_1_1" data-toggle="tab">首页</a></li>
-                    <li><a href="#tab_1_1_2" data-toggle="tab">专家预约</a></li>
-                    <li><a href="#tab_1_1_3" data-toggle="tab">特色医疗</a></li>
-                    <li><a href="#tab_1_1_4" data-toggle="tab">医学保科</a></li>
-                    <li><a href="#tab_1_1_5" data-toggle="tab">最新动态</a></li>
-                    <li><a href="#tab_1_1_6" data-toggle="tab">关于我们</a></li>
-                </ul>
+                <div class="tabbable-line" style="margin: 0 auto; width: 1024px;">
+                    <ul class="nav-tabs" style="list-style: none;margin:0px 0px 5px 0px;padding:0px 0px 0px 0px; font-size:15px">
+                        <li class="active"><a href="#tab_1_1_1" data-toggle="tab">首页</a></li>
+                        <li><a href="#tab_1_1_2" data-toggle="tab">专家预约</a></li>
+                        <li><a href="#tab_1_1_3" data-toggle="tab">特色医疗</a></li>
+                        <li><a href="#tab_1_1_4" data-toggle="tab">医学保科</a></li>
+                        <li><a href="#tab_1_1_5" data-toggle="tab">最新动态</a></li>
+                        <li><a href="#tab_1_1_6" data-toggle="tab">关于我们</a></li>
+                    </ul>
+                </div>
             </div>
             @RenderBody()
         </div>
